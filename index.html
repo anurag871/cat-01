@@ -1,0 +1,301 @@
+<!-- LOG IN PAGE -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		form {
+			background-color: white;
+			width: 30%;
+			margin: 0 auto;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		button[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+		}
+		button[type=submit]:hover {
+			background-color: #45a049;
+		}
+		.cancelbtn {
+			width: auto;
+			padding: 14px 20px;
+			background-color: #f44336;
+		}
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+		img.avatar {
+			width: 40%;
+			border-radius: 50%;
+		}
+		.container {
+			padding: 16px;
+		}
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+		@media screen and (max-width: 300px) {
+			span.psw {
+				display: block;
+				float: none;
+			}
+			.cancelbtn {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>Login Form</h2>
+	<form action="/action_page.php">
+		<div class="imgcontainer">
+			<img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+		</div>
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="USER ID" name="uname" required>
+			<label for="psw"><b>UserPassword</b></label>
+			<input type="password" placeholder="USER PASSWORD" name="psw" required>
+			<button type="submit">Login</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+		<div class="container" style="background-color:#f1f1f1">
+			<button type="button" class="cancelbtn">Cancel</button>
+			<span class="psw">Forgot <a href="#">password?</a></span>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+<!--LISTING OF MAIL -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listing of Mails</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 0 auto;
+			background-color: white;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+	</style>
+</head>
+<body>
+	<h2>Listing of Mails</h2>
+	<table>
+		<tr>
+			<th>FROM</th>
+			<th>SUB</th>
+			<th>DATE</th>
+		</tr>
+		<tr>
+			<td>AMAN</td>
+			<td>Meeting Reminder</td>
+			<td>05/01/2024</td>
+		</tr>
+		<tr>
+			<td>VEDANT</td>
+			<td>Project Update</td>
+			<td>10/02/2024</td>
+		</tr>
+		<tr>
+			<td>MUBASSHIR</td>
+			<td>Product Launch</td>
+			<td>06/03/2024</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+<!--NEW MAIL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Mail</title>
+    <style>
+       
+       body.new-mail {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.container.new-mail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+input[type="text"].new-mail,
+textarea.new-mail {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button[type="submit"].new-mail {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type="submit"].new-mail:hover {
+    background-color: #145eae;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Compose New Mail</h2>
+        <form action="send-mail.php" method="post">
+            <input type="text" name="to" placeholder="To" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Type your message here" rows="6" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--VIEW MAIL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Mail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+        }
+        h2, h3, p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #145eae;
+        }
+        .mail-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>View Mail</h2>
+        <h3>Subject: Important Meeting</h3>
+        <p>From: alwinsir@example.com</p>
+        <p>Date: January 05, 2023</p>
+        <p>exam remainder</p>
+        <div class="mail-content" id="mailContent">
+            <p>This is the content of the viewed mail.</p>
+        </div>
+        <button id="viewMailBtn">View Mail</button>
+        <button id="replyMailBtn">Reply</button>
+    </div>
+
+    <script>
+        // JavaScript to handle the button click events
+        document.getElementById('viewMailBtn').addEventListener('click', function() {
+            document.getElementById('mailContent').style.display = 'block';
+        });
+
+        document.getElementById('replyMailBtn').addEventListener('click', function() {
+            // Replace this with functionality to reply to the mail
+            alert('Reply functionality would be implemented here.');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
